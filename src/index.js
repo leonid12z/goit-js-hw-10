@@ -25,14 +25,14 @@ function onSearch(e) {
 }
 
 function onFetchError() {
-    Notiflix.Notify.failure("Oops, there is no country with that name")
+    Notiflix.Notify.failure('Oops, there is no country with that name')
 }
 
 function renderCountryView(name) {
     if (name.length > 10) {
         refs.countryList.innerHTML = "";
         refs.countryInfo.innerHTML = "";
-        Notiflix.Notify.info("Too many matches found. Please enter a more specific name.")
+        Notiflix.Notify.info('Too many matches found. Please enter a more specific name.')
     } else if (name.length <= 10 && name.length > 1) {
         renderCountryList(name)
     } else {
