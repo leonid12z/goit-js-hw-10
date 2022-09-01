@@ -61,9 +61,9 @@ function countryInfo(data) {
         obj.population
       }</span></p>
       <p class="description">Languages: <span class="descriptio__span">${languagesCountry(
-        obj.languages
+        obj.languages,
       )}</span></p>
-      `
+      `,
     )
     .join('');
 }
