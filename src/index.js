@@ -1,6 +1,7 @@
 import './css/styles.css';
 import debounce from 'lodash.debounce';
 import { fetchCountries } from './js/fetchCountries.js';
+// import Notiflix from 'notiflix';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
@@ -26,7 +27,9 @@ function featchResponse(e) {
 function getAllObjektsFromPromises(data) {
    const dataLength = data.length;
    if (dataLength > 10) {
-      Notify.info('Too many matches found. Please enter a more specific name.');
+      Notify.info(
+        'Too many matches found. Please enter a more specific name.'
+      );
       return;
    }
    if (dataLength >= 2 && dataLength <= 10) {
